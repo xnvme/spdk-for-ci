@@ -13,9 +13,7 @@ all:
 		export PKG_CONFIG_PATH=$$PKG_CONFIG_PATH:/usr/lib/pkgconfig:/usr/lib64/pkgconfig && \
 		meson setup builddir \
 		-Dwith-spdk=false \
-		-Dwith-fio=false \
-		-Dwith-libvfn=false \
-		-Dshared_library=false && \
+		-Dwith-libvfn=disabled && \
 		meson compile -C builddir && \
 		cd -)
 
