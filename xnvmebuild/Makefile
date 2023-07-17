@@ -15,6 +15,7 @@ all:
 		-Dwith-spdk=false \
 		-Dwith-libvfn=disabled && \
 		meson compile -C builddir && \
+		rm -rf builddir/lib/*.so* \
 		cd -)
 
 install: all
